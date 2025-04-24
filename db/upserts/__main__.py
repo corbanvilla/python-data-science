@@ -2,4 +2,4 @@
 Imports will sequentially run upserts.
 """
 
-import upserts.prompts
+import db.upserts.prompts
