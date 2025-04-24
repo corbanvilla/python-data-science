@@ -1,0 +1,15 @@
+services:
+  postgres:
+    image: postgres:latest
+    container_name: postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: wnx8nfg5ekeHFH35ymx
+      POSTGRES_DB: database
+    ports:
+      - "127.0.0.1:5432:5432"
+    volumes:
+      - ./db_data_postgres:/var/lib/postgresql/data
+      # SQL dump files here will restore backups 
+      # - ./datasets/postgres:/docker-entrypoint-initdb.d
+    restart: unless-stopped
